@@ -105,16 +105,63 @@ img{
 
 @keyframes boomTxt{
   0%{
-    transform: scale(1)
+    transform: scale(1);
   }
   25%{
-    transform: scale(1.5)
+    transform: scale(1.5);
   }
-  25%{
-    transform: scale(2)
+  50%{
+    transform: scale(2);
   }
   100%{
-    transform: scale(1)
+    transform: scale(1);
   }
 }
 
+
+/*ANCHOR - heart-animated*/
+
+.heart{
+  position: relative;
+  width: 100px;
+  height: 90px;
+  animation: heartAnimation 2.5s linear infinite;
+}
+
+.heart__right, .heart__left{
+  position: absolute;
+  width: 50px;
+  height: 80px;
+  background: red;
+  border-radius: 50% 50% 0 0;
+}
+
+.heart__left{
+  top: 0;
+  left: 42px;
+  transform: rotate(45deg);
+}
+
+.heart__right{
+  top: 0;
+  left: 20px;
+  transform: rotate(-45deg);
+}
+
+@keyframes heartAnimation {
+  0% {
+    transform: scale(1) translateY(-50px) translateX(0);
+  }
+  25% {
+    transform: scale(2) translateY(0) translateX(50px);
+  }
+  50% {
+    transform: scale(1) translateY(50px) translateX(0);
+  }
+  75% {
+    transform: scale(2) translateY(0) translateX(-50px);
+  }
+  100% {
+    transform: scale(1) translateY(-50px) translateX(0);
+  }
+}

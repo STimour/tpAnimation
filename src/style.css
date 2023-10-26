@@ -1,0 +1,43 @@
+*{
+    box-spazig: border-box;
+}
+
+#app{
+    display: flex;
+    flex-direction: column;
+    padding: 30%;
+    height: 100vh;
+}
+
+.loader, .spinner, .boom{
+    margin: 20px auto;
+    padding: 20%;
+    height: 35%;
+}
+
+.loaderBox{
+    width: 50px; 
+    height: 50px;
+    border: 5px white;
+    border-right: 5px solid blue;
+    border-radius: 50%;
+    animation: loader 1s linear infinite;
+}
+
+@keyframes loader {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+
+.spinnerBox{
+  width: 90%;
+  animation: loader 1s linear infinite;
+}
+
+img{
+  width: 100%;
+}

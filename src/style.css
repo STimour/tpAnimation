@@ -8,8 +8,11 @@
     display: flex;
     flex-direction: column;
     padding: 30%;
-    height: 100vh;
+    align-items: center;
+    justify-content: center;
 }
+
+
 
 .loader, .spinner{
     margin: 20px auto;
@@ -47,12 +50,13 @@ img{
 /*ANCHOR - page text-animated*/
 
 .boom{
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  font-size: 5rem;
+  font-size: 7rem;
   font-family: 'Libre Barcode 128 Text';
+  animation: boomTxt 2s linear infinite;
+}
+
+.boom:hover{
+  animation: loader 1s linear 1;
 }
 
 @keyframes colorBlink{
@@ -81,19 +85,36 @@ img{
 
 .l{
   animation: colorBlink 1s linear infinite;
+  animation-delay: 0.25s;
 }
 
 .o{
   animation: colorBlink 1s linear infinite;
-  animation-delay: 0.3s;
+  animation-delay: 0.50s;
 }
 
 .v{
   animation: colorBlink 1s linear infinite;
-  animation-delay: 0.7s;
+  animation-delay: 0.75s;
 }
 
 .e{
   animation: colorBlink 1s linear infinite;
   animation-delay: 1s;
 }
+
+@keyframes boomTxt{
+  0%{
+    transform: scale(1)
+  }
+  25%{
+    transform: scale(1.5)
+  }
+  25%{
+    transform: scale(2)
+  }
+  100%{
+    transform: scale(1)
+  }
+}
+

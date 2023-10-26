@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Libre+Barcode+128+Text&display=swap');
+
 *{
     box-spazig: border-box;
 }
@@ -9,7 +11,7 @@
     height: 100vh;
 }
 
-.loader, .spinner, .boom{
+.loader, .spinner{
     margin: 20px auto;
     padding: 20%;
     height: 35%;
@@ -40,4 +42,58 @@
 
 img{
   width: 100%;
+}
+
+/*ANCHOR - page text-animated*/
+
+.boom{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 5rem;
+  font-family: 'Libre Barcode 128 Text';
+}
+
+@keyframes colorBlink{
+  0%{
+    color: #FF0000;
+  }
+  15%{
+    color: #FFA500;
+  }
+  30%{
+    color: #FFFF00;
+  }
+  45%{
+    color: #008000;
+  }
+  60%{
+    color: #0000FF;
+  }
+  75%{
+    color: #4B0082;
+  }
+  100%{
+    color:  #800080;
+  }
+}
+
+.l{
+  animation: colorBlink 1s linear infinite;
+}
+
+.o{
+  animation: colorBlink 1s linear infinite;
+  animation-delay: 0.3s;
+}
+
+.v{
+  animation: colorBlink 1s linear infinite;
+  animation-delay: 0.7s;
+}
+
+.e{
+  animation: colorBlink 1s linear infinite;
+  animation-delay: 1s;
 }
